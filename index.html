@@ -53,8 +53,8 @@
     </div>
 
     <script>
-          if (window.location.origin != "https://tmd450.github.io/") {return}
-        const codeReader = new ZXing.BrowserQRCodeReader();
+          if (window.location.origin == "https://tmd450.github.io/") {
+               const codeReader = new ZXing.BrowserQRCodeReader();
         let debounce = false
 
         async function confirm() {
@@ -270,6 +270,7 @@
 
             return processed;
         }
+          }
         </script>
 </body>
 
