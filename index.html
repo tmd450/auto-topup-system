@@ -105,8 +105,10 @@
                         });
 
                         const result = await response.text();
+                        debounce = false
                         alert(result);  // แสดงผลลัพธ์ที่ส่งกลับจาก Apps Script
                     } else {
+                        debounce = false
                         alert('ไม่พบ QR Code ในรูปภาพ กรุณาลองภาพอื่น')
                     }
                 };
