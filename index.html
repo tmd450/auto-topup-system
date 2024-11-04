@@ -92,10 +92,9 @@
                     if (qrData) {
                         const canvas = document.createElement('canvas');
                         const ctx = canvas.getContext('2d');
-                        const MAX_WIDTH = 400;
-                        const MAX_HEIGHT = 400;
+                        const MAX_WIDTH = 800;
+                        const MAX_HEIGHT = 800;
 
-                        // คำนวณสัดส่วน
                         let width = img.width;
                         let height = img.height;
 
@@ -111,7 +110,7 @@
                             }
                         }
 
-                        // ตั้งค่าขนาด canvas
+
                         canvas.width = width;
                         canvas.height = height;
 
@@ -124,9 +123,9 @@
                                 method: "POST",
                                 headers: { "Content-Type": "application/json" },
                                 body: JSON.stringify({
-                                    url: "https://script.google.com/macros/s/AKfycbyZhJ_dwOBr4MwzS4-2UcRZomMyXIpbRqZLYXICe8pYW-wYC-KS1n5BNCZvTAcxqjc/exec?qrData=" + encodeURIComponent(qrData) + "&username=" + encodeURIComponent(usernameInput),
+                                    url: "https://script.google.com/macros/s/AKfycbxel0zmW-RnRl6cUhKQnQSlbeAV2HhuK402DvU_eO4OeQhXHgN-TRQBZDojFtMqrfnf/exec?qrData=" + encodeURIComponent(qrData) + "&username=" + encodeURIComponent(usernameInput) + "&base64Image=" + encodeURIComponent(base64Image),
                                     options: {
-                                        method: "GET", // เปลี่ยนเป็น GET เพื่อให้ตรงกับ doGet
+                                        method: "GET",
                                         headers: { "Content-Type": "application/json" },
                                     }
                                 })
@@ -154,8 +153,6 @@
 
             reader.readAsDataURL(file);
         }
-
-
 
         async function tryMultipleReadingMethods(img) {
             const methods = [
