@@ -75,7 +75,7 @@
         const base64Image = e.target.result.split(',')[1];
         
         // ส่งข้อมูลไปยัง Google Apps Script Web App URL
-        const response = await fetch("https://script.google.com/macros/s/AKfycbwPOa6CNntMvdpMszS1wAGd54GSeMxBuF211jk4Xt8HC3b_mZS2qbmqJniXFm7RTuBI/exec", {
+        const response = await fetch("https://script.google.com/macros/s/AKfycbzhb210_8qY9wPs4YyLk32W_D1qoccogcam7Yr5JvdplVuGqZ9i_1-MkW_5BHe9snhy/exec", {
             method: "POST",
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify({
